@@ -1,37 +1,27 @@
 import 'package:flutter/material.dart';
+ 
 
-import '../buttonBar.dart';
-
-class homePage extends StatefulWidget {
-  const homePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<homePage> createState() => _homePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _homePageState extends State<homePage> {
-    int _currentIndex = 0;
-
-  void _onTabTapped(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  }
-
+class _HomePageState extends State<HomePage> {
+ 
+   
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text('FSOS TEST'),
       ),
-      body:  Text('Text ne', ),
+      body: Text(
+        'Text ne',
+      ),
       
-      bottomNavigationBar:  CustomBottomNavigationBar(
-          currentIndex: _currentIndex,
-          onTabTapped: _onTabTapped,
-        ),
-      );
-    
+    );
   }
 }

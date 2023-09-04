@@ -38,7 +38,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           onTap: widget.onTabTapped,
           selectedItemColor: const Color.fromARGB(255, 2, 73, 132),
           unselectedItemColor: Colors.black,
-          items: [
+          items:const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
