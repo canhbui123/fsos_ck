@@ -1,3 +1,4 @@
+import 'package:ck_fsos/Screen/WeatherScreen/WeatherScreen.dart';
 import 'package:flutter/material.dart';
 
 import '../buttonBar.dart';
@@ -28,7 +29,7 @@ class _profilePageState extends State<profilePage> {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: NetworkImage('URL_TO_YOUR_IMAGE'),
+                  image: AssetImage('img/OIP.jpeg'),
                   fit: BoxFit.cover,
                 ),
                 boxShadow: [
@@ -94,6 +95,14 @@ class _profilePageState extends State<profilePage> {
                   ),
                   Divider(),
                   ListTile(
+                     onTap: () {
+                      setState(() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WeatherScreen()));
+                      });
+                    },
                     title: Text(
                       'Thời tiết',
                       style: TextStyle(fontWeight: FontWeight.bold),

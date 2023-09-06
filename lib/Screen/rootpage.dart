@@ -1,3 +1,6 @@
+import 'package:ck_fsos/Screen/Search/searchScren.dart';
+import 'package:ck_fsos/Screen/WeatherScreen/WeatherScreen.dart';
+import 'package:ck_fsos/Screen/bluetooth/bluetoothScreen.dart';
 import 'package:ck_fsos/Screen/home/homePage.dart';
 import 'package:ck_fsos/Screen/profile/profilePage.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +18,12 @@ class _RootPageState extends State<RootPage> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-   HomePage(),
-  HealthPage(),
-   HomePage(),
-   HomePage(),
+ homePage(),
+ SearchScreen(),
+ bleScreen(),
+ WeatherScreen(),
+ // HealthPage(),
+
    profilePage() // Thêm các trang con khác tương ứng
   ];
 
